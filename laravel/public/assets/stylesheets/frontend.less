@@ -1,0 +1,212 @@
+/*==========  Bootstrap  ==========*/
+@import 'base.less';
+
+/*==========  Fonts  ==========*/
+@import url(//fonts.googleapis.com/css?subset=latin,cyrillic-ext,latin-ext,cyrillic&family=Open+Sans+Condensed:300,700|Merriweather:400,300,300italic,400italic,700,700italic|Roboto+Slab:300,700);
+
+/*==========  vendor: font awesome  ==========*/
+@import "../vendor/font-awesome/less/font-awesome.less";
+
+/*==========  Global  ==========*/
+body {
+	padding: 130px 0 30px 0;
+	-webkit-font-smoothing: subpixel-antialiased;
+	font-weight: 300;
+}
+
+/*==========  Custzom mixin  ==========*/
+#translucent {
+	.background(@color: @white, @alpha: 1) {
+		background-color: hsla(hue(@color), saturation(@color), lightness(@color), @alpha);
+	}
+	.border(@color: @white, @alpha: 1) {
+		border-color: hsla(hue(@color), saturation(@color), lightness(@color), @alpha);
+		.background-clip(padding-box);
+	}
+}
+
+
+/*==========  Header  ==========*/
+#header {
+	.navbar-default {
+		border-bottom: 1px solid lighten(#000, 85%);
+		#translucent > .background(#fff, 0.75);
+		.box-shadow(0 2px 2px -2px rgba(0,0,0,0.1));
+		.navbar-header {
+			width: 100%;
+			header {
+				margin-top: 17px;
+				h1,
+				h2 {
+					margin: 0;
+					text-align: center;
+					text-transform: uppercase;
+					letter-spacing: 0.2em;
+					font-family: "Open Sans Condensed", "Open Sans", "Helvetica Neue", Helvetica, Arial, "Nimbus L", sans-serif;
+				}
+				h1 {
+					font-size: 30px;
+				}
+				h2 {
+					font-size: 16px;
+					font-weight: 300;
+				}
+			}
+		}
+	}
+}
+
+/*==========  Main  ==========*/
+#main {
+	.row {
+		[class*="col-"] {
+			margin-bottom: 30px;
+			&:last-child {
+				margin-bottom: 0;
+			}
+			@media (min-width: @screen-sm-min) {
+				margin-bottom: 0;
+			}
+			> header {
+				display: none;
+			}
+			figure {
+				> a {
+					padding: 20px;
+					background-color: #fff;
+					display: block;
+					img {
+						margin: 0 auto;
+					}
+				}
+				> figcaption {
+					margin-top: 10px;
+					white-space: nowrap;
+					overflow: hidden;
+					text-overflow: ellipsis;
+				}
+			}
+			section {
+				header {
+					margin-top: 30px;
+					h1 {
+						font-size: 14px;
+						text-transform: uppercase;
+						letter-spacing: 0.2em;
+						font-family: "Open Sans Condensed", "Open Sans", "Helvetica Neue", Helvetica, Arial, "Nimbus L", sans-serif;
+						margin: 0 0 5px 0;
+					}
+				}
+				dl {
+						dt,
+						dd {
+							line-height: 2em;
+							white-space: nowrap;
+							overflow: hidden;
+							text-overflow: ellipsis;
+						}
+						dt {
+							border-top: 1px solid #000;
+							font-weight: 300;
+						}
+						dd {
+							border-top: 1px dotted #000;
+							font-weight: 700;
+							position: relative;
+						&:last-child {
+							border-bottom: 1px solid #000;
+						}
+						&.icon {
+							padding-right: 20px;
+							&:after {
+								position: absolute;
+								right: 0;
+								top: 0;
+								font-family: FontAwesome;
+								font-weight: normal;
+								font-style: normal;
+								text-decoration: inherit;
+								-webkit-font-smoothing: antialiased;
+							}
+						}
+						&.good {
+							&:after {
+								content:"\f067";
+							}
+						}
+						&.bad {
+							&:after {
+								content:"\f068";
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+/*==========  vendor: ekko lightbox  ==========*/
+@import "../vendor/ekko-lightbox/ekko-lightbox.less";
+
+.modal-backdrop.in {
+	-webkit-opacity: 0.85;
+	-moz-opacity: 0.85;
+	opacity: 0.85;
+	background-color: #000;
+}
+.ekko-lightbox .modal-content {
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
+	-webkit-border-radius: 0;
+	-moz-border-radius: 0;
+	border-radius: 0;
+	border: none;
+	background-color: transparent;
+}
+.ekko-lightbox .modal-header {
+	border: 0;
+	padding-left: 0;
+	padding-right: 0;
+}
+.ekko-lightbox .modal-header .close {
+	-webkit-opacity: 0.5;
+	-moz-opacity: 0.5;
+	opacity: 0.5;
+	color: #fff;
+	text-shadow: 0;
+	font-weight: 100;
+	margin-top: 5px;
+}
+.ekko-lightbox .modal-header .close:hover {
+	-webkit-opacity: 1;
+	-moz-opacity: 1;
+	opacity: 1;
+}
+.ekko-lightbox .modal-header h4.modal-title {
+	font-weight: 100;
+	color: #fff;
+	padding: 0;
+}
+.ekko-lightbox .modal-body {
+	padding: 0;
+	background-color: #FFFFFF;
+}
+.ekko-lightbox .modal-footer {
+	-webkit-opacity: 0.9;
+	-moz-opacity: 0.9;
+	opacity: 0.9;
+	border: 0;
+	color: #fff;
+	font-weight: 100;
+	padding: 0;
+	margin-top: 10px;
+}
+.ekko-lightbox-nav-overlay a {
+	-webkit-opacity: 0.9;
+	-moz-opacity: 0.9;
+	opacity: 0.9;
+	text-shadow: none;
+}
+
