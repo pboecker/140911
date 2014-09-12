@@ -3753,7 +3753,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 }
 .navbar {
   position: relative;
-  min-height: 99px;
+  min-height: 1px;
   margin-bottom: 20px;
   border: 1px solid transparent;
 }
@@ -3861,10 +3861,10 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 }
 .navbar-brand {
   float: left;
-  padding: 39.5px 15px;
+  padding: -9.5px 15px;
   font-size: 18px;
   line-height: 20px;
-  height: 99px;
+  height: 1px;
 }
 .navbar-brand:hover,
 .navbar-brand:focus {
@@ -3881,8 +3881,8 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   float: right;
   margin-right: 15px;
   padding: 9px 10px;
-  margin-top: 32.5px;
-  margin-bottom: 32.5px;
+  margin-top: -16.5px;
+  margin-bottom: -16.5px;
   background-color: transparent;
   background-image: none;
   border: 1px solid transparent;
@@ -3906,7 +3906,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   }
 }
 .navbar-nav {
-  margin: 19.75px -15px;
+  margin: -4.75px -15px;
 }
 .navbar-nav > li > a {
   padding-top: 10px;
@@ -3944,8 +3944,8 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
     float: left;
   }
   .navbar-nav > li > a {
-    padding-top: 39.5px;
-    padding-bottom: 39.5px;
+    padding-top: -9.5px;
+    padding-bottom: -9.5px;
   }
   .navbar-nav.navbar-right:last-child {
     margin-right: -15px;
@@ -3969,8 +3969,8 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   border-bottom: 1px solid transparent;
   -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 0 rgba(255, 255, 255, 0.1);
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 0 rgba(255, 255, 255, 0.1);
-  margin-top: 32.5px;
-  margin-bottom: 32.5px;
+  margin-top: -16.5px;
+  margin-bottom: -16.5px;
 }
 @media (min-width: 768px) {
   .navbar-form .form-group {
@@ -4049,20 +4049,20 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   border-bottom-left-radius: 0;
 }
 .navbar-btn {
-  margin-top: 32.5px;
-  margin-bottom: 32.5px;
+  margin-top: -16.5px;
+  margin-bottom: -16.5px;
 }
 .navbar-btn.btn-sm {
-  margin-top: 34.5px;
-  margin-bottom: 34.5px;
+  margin-top: -14.5px;
+  margin-bottom: -14.5px;
 }
 .navbar-btn.btn-xs {
-  margin-top: 38.5px;
-  margin-bottom: 38.5px;
+  margin-top: -10.5px;
+  margin-bottom: -10.5px;
 }
 .navbar-text {
-  margin-top: 39.5px;
-  margin-bottom: 39.5px;
+  margin-top: -9.5px;
+  margin-bottom: -9.5px;
 }
 @media (min-width: 768px) {
   .navbar-text {
@@ -7818,101 +7818,206 @@ button.close {
 }
 /*==========  Global  ==========*/
 body {
-  padding: 130px 0 30px 0;
   -webkit-font-smoothing: subpixel-antialiased;
   font-weight: 300;
+  padding: 52px 0 30px 0;
+}
+@media (min-width: 480px) {
+  body {
+    padding: 76.47058824px 0 30px 0;
+  }
+}
+@media (min-width: 768px) {
+  body {
+    padding: 86.66666667px 0 30px 0;
+  }
+}
+@media (min-width: 992px) {
+  body {
+    padding: 108.33333333px 0 30px 0;
+  }
+}
+@media (min-width: 1200px) {
+  body {
+    padding: 130px 0 30px 0;
+  }
 }
 /*==========  Custzom mixin  ==========*/
 /*==========  Header  ==========*/
-#header .navbar-default {
+#header .navbar {
   border-bottom: 1px solid #d9d9d9;
-  background-color: rgba(255, 255, 255, 0.75);
-  -webkit-box-shadow: 0 2px 2px -2px rgba(0, 0, 0, 0.1);
-  box-shadow: 0 2px 2px -2px rgba(0, 0, 0, 0.1);
+  background-color: rgba(255, 255, 255, 0.85);
+  -webkit-box-shadow: 0 2px 2px -2px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 2px 2px -2px rgba(0, 0, 0, 0.15);
+  height: 39.6px;
 }
-#header .navbar-default .navbar-header {
+@media (min-width: 480px) {
+  #header .navbar {
+    height: 58.23529412px;
+  }
+}
+@media (min-width: 768px) {
+  #header .navbar {
+    height: 66px;
+  }
+}
+@media (min-width: 992px) {
+  #header .navbar {
+    height: 82.5px;
+  }
+}
+@media (min-width: 1200px) {
+  #header .navbar {
+    height: 99px;
+  }
+}
+#header .navbar .navbar-header {
   width: 100%;
 }
-#header .navbar-default .navbar-header header {
-  margin-top: 17px;
-}
-#header .navbar-default .navbar-header header h1,
-#header .navbar-default .navbar-header header h2 {
+#header .navbar .navbar-header header h1,
+#header .navbar .navbar-header header h2 {
   margin: 0;
   text-align: center;
   text-transform: uppercase;
   letter-spacing: 0.2em;
   font-family: "Open Sans Condensed", "Open Sans", "Helvetica Neue", Helvetica, Arial, "Nimbus L", sans-serif;
 }
-#header .navbar-default .navbar-header header h1 {
-  font-size: 30px;
+#header .navbar .navbar-header header h1 {
+  margin-top: 6px;
+  font-size: 12px;
 }
-#header .navbar-default .navbar-header header h2 {
-  font-size: 16px;
+@media (min-width: 480px) {
+  #header .navbar .navbar-header header h1 {
+    margin-top: 8.82352941px;
+    font-size: 17.64705882px;
+  }
+}
+@media (min-width: 768px) {
+  #header .navbar .navbar-header header h1 {
+    margin-top: 10px;
+    font-size: 20px;
+  }
+}
+@media (min-width: 992px) {
+  #header .navbar .navbar-header header h1 {
+    margin-top: 12.5px;
+    font-size: 25px;
+  }
+}
+@media (min-width: 1200px) {
+  #header .navbar .navbar-header header h1 {
+    margin-top: 15px;
+    font-size: 30px;
+  }
+}
+#header .navbar .navbar-header header h2 {
   font-weight: 300;
+  font-size: 6.4px;
 }
-/*==========  Main  ==========*/
-#main .row [class*="col-"] {
+@media (min-width: 480px) {
+  #header .navbar .navbar-header header h2 {
+    font-size: 9.41176471px;
+  }
+}
+@media (min-width: 768px) {
+  #header .navbar .navbar-header header h2 {
+    font-size: 10.66666667px;
+  }
+}
+@media (min-width: 992px) {
+  #header .navbar .navbar-header header h2 {
+    font-size: 13.33333333px;
+  }
+}
+@media (min-width: 1200px) {
+  #header .navbar .navbar-header header h2 {
+    font-size: 16px;
+  }
+}
+/*==========  Main / Footer  ==========*/
+#main .row [class*="col-"],
+#footer .row [class*="col-"] {
   margin-bottom: 30px;
 }
-#main .row [class*="col-"]:last-child {
+#main .row [class*="col-"]:last-child,
+#footer .row [class*="col-"]:last-child {
   margin-bottom: 0;
 }
 @media (min-width: 768px) {
-  #main .row [class*="col-"] {
+  #main .row [class*="col-"],
+  #footer .row [class*="col-"] {
     margin-bottom: 0;
   }
 }
-#main .row [class*="col-"] > header {
+#main .row [class*="col-"] > header,
+#footer .row [class*="col-"] > header {
   display: none;
 }
-#main .row [class*="col-"] figure > a {
+#main .row [class*="col-"] figure > a,
+#footer .row [class*="col-"] figure > a {
   padding: 20px;
   background-color: #fff;
   display: block;
 }
-#main .row [class*="col-"] figure > a img {
+#main .row [class*="col-"] figure > a img,
+#footer .row [class*="col-"] figure > a img {
   margin: 0 auto;
 }
-#main .row [class*="col-"] figure > figcaption {
+#main .row [class*="col-"] figure > figcaption,
+#footer .row [class*="col-"] figure > figcaption {
   margin-top: 10px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
-#main .row [class*="col-"] section header {
+#main .row [class*="col-"] section.additional,
+#footer .row [class*="col-"] section.additional {
+  -webkit-opacity: 0.30;
+  -moz-opacity: 0.30;
+  opacity: 0.30;
+}
+#main .row [class*="col-"] section header,
+#footer .row [class*="col-"] section header {
   margin-top: 30px;
 }
-#main .row [class*="col-"] section header h1 {
-  font-size: 14px;
+#main .row [class*="col-"] section header h1,
+#footer .row [class*="col-"] section header h1 {
+  font-size: 16px;
   text-transform: uppercase;
   letter-spacing: 0.2em;
   font-family: "Open Sans Condensed", "Open Sans", "Helvetica Neue", Helvetica, Arial, "Nimbus L", sans-serif;
   margin: 0 0 5px 0;
 }
 #main .row [class*="col-"] section dl dt,
-#main .row [class*="col-"] section dl dd {
+#footer .row [class*="col-"] section dl dt,
+#main .row [class*="col-"] section dl dd,
+#footer .row [class*="col-"] section dl dd {
   line-height: 2em;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
-#main .row [class*="col-"] section dl dt {
+#main .row [class*="col-"] section dl dt,
+#footer .row [class*="col-"] section dl dt {
   border-top: 1px solid #000;
   font-weight: 300;
 }
-#main .row [class*="col-"] section dl dd {
+#main .row [class*="col-"] section dl dd,
+#footer .row [class*="col-"] section dl dd {
   border-top: 1px dotted #000;
   font-weight: 700;
   position: relative;
 }
-#main .row [class*="col-"] section dl dd:last-child {
+#main .row [class*="col-"] section dl dd:last-child,
+#footer .row [class*="col-"] section dl dd:last-child {
   border-bottom: 1px solid #000;
 }
-#main .row [class*="col-"] section dl dd.icon {
+#main .row [class*="col-"] section dl dd.icon,
+#footer .row [class*="col-"] section dl dd.icon {
   padding-right: 20px;
 }
-#main .row [class*="col-"] section dl dd.icon:after {
+#main .row [class*="col-"] section dl dd.icon:after,
+#footer .row [class*="col-"] section dl dd.icon:after {
   position: absolute;
   right: 0;
   top: 0;
@@ -7922,10 +8027,12 @@ body {
   text-decoration: inherit;
   -webkit-font-smoothing: antialiased;
 }
-#main .row [class*="col-"] section dl dd.good:after {
+#main .row [class*="col-"] section dl dd.good:after,
+#footer .row [class*="col-"] section dl dd.good:after {
   content: "\f067";
 }
-#main .row [class*="col-"] section dl dd.bad:after {
+#main .row [class*="col-"] section dl dd.bad:after,
+#footer .row [class*="col-"] section dl dd.bad:after {
   content: "\f068";
 }
 /*==========  vendor: ekko lightbox  ==========*/
